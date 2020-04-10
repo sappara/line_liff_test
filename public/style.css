@@ -1,6 +1,6 @@
 /* html {
   font-size: 11px;
-}
+} */
 
 table {
   width: 100%;
@@ -8,10 +8,10 @@ table {
   word-break: break-all;
 }
 
-div {
+/* div {
   max-width: 100%;
   text-align: center;
-}
+} */
 
 th {
   text-align: center;
@@ -23,14 +23,14 @@ td {
   border: 1px solid black;
 }
 
-img {
+/* img {
   max-width: 25%;
   height: auto;
 } */
 
-/* button {
+button {
   margin: 4px;
-} */
+}
 
 #code-block {
   background-color: #eee;
@@ -58,14 +58,14 @@ img {
   top: 40px;
 }
 
-/* .textLeft {
+.textLeft {
   text-align: left;
 }
 
 .buttonGroup {
   position: relative;
   top: 20px;
-} */
+}
 
 .hidden {
   display: none;
