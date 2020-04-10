@@ -136,7 +136,7 @@ function registerButtonHandlers() {
           .sendMessages([
             {
               type: "text",
-              text: "You've successfully sent a message! Hooray!",
+              text: "完了",
             },
           ])
           .then(function () {
