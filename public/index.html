@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LIFF Starter</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -16,7 +17,6 @@
       href="honoka/css/bootstrap.min.css"
     />
     <link rel="stylesheet" type="text/css" href="honoka/css/style.css" />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
@@ -152,13 +152,93 @@
           </div>
         </section>
       </div>
-
+    <main>
+      
       <div id="liffAppContent">
         <!-- ACTION BUTTONS -->
         <div class="buttonGroup">
           <div class="buttonRow">
+            <button id="openWindowButton">Open External Window</button>
+            <button id="closeWindowButton">Close LIFF App</button>
+          </div>
+          <div class="buttonRow">
+            <button id="scanQrCodeButton">Open QR Code Reader</button>
             <button id="sendMessageButton">Send Message</button>
           </div>
+          <div class="buttonRow">
+            <button id="getAccessToken">Get Access Token</button>
+            <button id="getProfileButton">Get Profile</button>
+          </div>
+        </div>
+        <!-- ACCESS TOKEN DATA -->
+        <div id="accessTokenData" class="hidden textLeft">
+          <h2>Access Token</h2>
+          <a href="#" onclick="toggleAccessToken()">Close Access Token</a>
+          <table>
+            <tr>
+              <th>accessToken</th>
+              <td id="accessTokenField"></td>
+            </tr>
+          </table>
+        </div>
+        <!-- SCAN QR RESULT -->
+        <div id="scanQr" class="hidden textLeft">
+          <h2>QR Code reader</h2>
+          <a href="#" onclick="toggleQRCodeReader()"
+            >Close QR Code Reader Result</a
+          >
+          <table>
+            <tr>
+              <th>scanCode Result</th>
+              <td id="scanQrField"></td>
+            </tr>
+          </table>
+        </div>
+        <!-- PROFILE INFO -->
+        <div id="profileInfo" class="hidden textLeft">
+          <h2>Profile</h2>
+          <a href="#" onclick="toggleProfileData()">Close Profile</a>
+          <div id="profilePictureDiv"></div>
+          <table>
+            <tr>
+              <th>userId</th>
+              <td id="userIdProfileField"></td>
+            </tr>
+            <tr>
+              <th>displayName</th>
+              <td id="displayNameField"></td>
+            </tr>
+            <tr>
+              <th>statusMessage</th>
+              <td id="statusMessageField"></td>
+            </tr>
+          </table>
+        </div>
+        <!-- LIFF DATA -->
+        <div id="liffData">
+          <h2 id="liffDataHeader" class="textLeft">LIFF Data</h2>
+          <table>
+            <tr>
+              <th>OS</th>
+              <td id="deviceOS" class="textLeft"></td>
+            </tr>
+            <tr>
+              <th>Language</th>
+              <td id="browserLanguage" class="textLeft"></td>
+            </tr>
+            <tr>
+              <th>LIFF SDK Version</th>
+              <td id="sdkVersion" class="textLeft"></td>
+            </tr>
+            <tr>
+              <th>isInClient</th>
+              <td id="isInClient" class="textLeft"></td>
+            </tr>
+            <tr>
+              <th>isLoggedIn</th>
+              <td id="isLoggedIn" class="textLeft"></td>
+            </tr>
+          </table>
         </div>
         <!-- LOGIN LOGOUT BUTTONS -->
         <div class="buttonGroup">
@@ -169,8 +249,8 @@
           <div id="isInClientMessage"></div>
           <div id="apiReferenceMessage">
             <p>
-              Available LIFF methods vary depending on the browser you use to
-              open the LIFF app.
+              Available LIFF methods vary depending on the browser you use to open
+              the LIFF app.
             </p>
             <p>
               Please refer to the
@@ -183,7 +263,6 @@
           </div>
         </div>
       </div>
-
       <!-- LIFF ID ERROR -->
       <div id="liffIdErrorMessage" class="hidden">
         <p>You have not assigned any value for LIFF ID.</p>
@@ -228,13 +307,11 @@
       <div id="nodeLiffIdErrorMessage" class="hidden">
         <p>Unable to receive the LIFF ID as an environment variable.</p>
       </div>
-    </main>
-
-    <script
-      charset="utf-8"
-      src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"
-    ></script>
-    <script src="liff-starter.js"></script>
+      <script
+        charset="utf-8"
+        src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"
+      ></script>
+      <script src="liff-starter.js"></script>
 
     <!-- Bootstrap honoka -->
     <script
@@ -248,9 +325,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="honoka/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $('.bs-component [data-toggle="popover"]').popover();
       $('.bs-component [data-toggle="tooltip"]').tooltip();
-    </script>
+    </script> -->
   </body>
 </html>
