@@ -2,18 +2,18 @@
   font-size: 11px;
 } */
 
-table {
+/* table {
   width: 100%;
   table-layout: fixed;
   word-break: break-all;
-}
+} */
 
 /* div {
   max-width: 100%;
   text-align: center;
 } */
 
-th {
+/* th {
   text-align: center;
 }
 
@@ -21,16 +21,16 @@ table,
 th,
 td {
   border: 1px solid black;
-}
+} */
 
 /* img {
   max-width: 25%;
   height: auto;
 } */
 
-button {
+/* button {
   margin: 4px;
-}
+} */
 
 #code-block {
   background-color: #eee;
@@ -58,14 +58,14 @@ button {
   top: 40px;
 }
 
-.textLeft {
+/* .textLeft {
   text-align: left;
 }
 
 .buttonGroup {
   position: relative;
   top: 20px;
-}
+} */
 
 .hidden {
   display: none;
