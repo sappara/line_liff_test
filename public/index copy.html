@@ -10,13 +10,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="honoka/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="honoka/css/style.css" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
@@ -24,8 +18,11 @@
         <section class="bs-docs-section">
           <div class="row">
             <div class="col-lg-12">
-              <div class="page-header">
-                <h1 id="containers">洗濯機で洗う</h1>
+              <div class="page-header mb-3">
+                <h1>洗濯機で洗う</h1>
+                <p class="bs-component">
+                  step14まであります。頑張って！
+                </p>
               </div>
             </div>
           </div>
@@ -40,19 +37,16 @@
                     <h3 class="card-title">
                       最初にすること
                     </h3>
-                  </div>
-                  <div class="embed-responsive">
-                    <img
-                      img
-                      src="imgs/image/_DSC2760-thumb_480.jpg"
-                      alt="step1写真"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
+                    <h4 class="card-subtitle text-muted">
                       まず洗剤を探してください
-                    </p>
+                    </h4>
                   </div>
+                  <img
+                    img
+                    src="imgs/image/_DSC2760-thumb_480.jpg"
+                    alt="step1写真"
+                    style="width: 100%; display: block;"
+                  />
                 </div>
               </div>
             </div>
@@ -156,16 +150,92 @@
         </section>
       </div>
     </main>
-
-    <!-- 以下　SDKの一部のこし -->
     <div id="liffAppContent">
       <!-- ACTION BUTTONS -->
       <div class="buttonGroup">
         <div class="buttonRow">
+          <button id="openWindowButton">Open External Window</button>
+          <button id="closeWindowButton">Close LIFF App</button>
+        </div>
+        <div class="buttonRow">
+          <button id="scanQrCodeButton">Open QR Code Reader</button>
           <button id="sendMessageButton">Send Message</button>
         </div>
+        <div class="buttonRow">
+          <button id="getAccessToken">Get Access Token</button>
+          <button id="getProfileButton">Get Profile</button>
+        </div>
       </div>
-
+      <!-- ACCESS TOKEN DATA -->
+      <div id="accessTokenData" class="hidden textLeft">
+        <h2>Access Token</h2>
+        <a href="#" onclick="toggleAccessToken()">Close Access Token</a>
+        <table>
+          <tr>
+            <th>accessToken</th>
+            <td id="accessTokenField"></td>
+          </tr>
+        </table>
+      </div>
+      <!-- SCAN QR RESULT -->
+      <div id="scanQr" class="hidden textLeft">
+        <h2>QR Code reader</h2>
+        <a href="#" onclick="toggleQRCodeReader()"
+          >Close QR Code Reader Result</a
+        >
+        <table>
+          <tr>
+            <th>scanCode Result</th>
+            <td id="scanQrField"></td>
+          </tr>
+        </table>
+      </div>
+      <!-- PROFILE INFO -->
+      <div id="profileInfo" class="hidden textLeft">
+        <h2>Profile</h2>
+        <a href="#" onclick="toggleProfileData()">Close Profile</a>
+        <div id="profilePictureDiv"></div>
+        <table>
+          <tr>
+            <th>userId</th>
+            <td id="userIdProfileField"></td>
+          </tr>
+          <tr>
+            <th>displayName</th>
+            <td id="displayNameField"></td>
+          </tr>
+          <tr>
+            <th>statusMessage</th>
+            <td id="statusMessageField"></td>
+          </tr>
+        </table>
+      </div>
+      <!-- LIFF DATA -->
+      <div id="liffData">
+        <h2 id="liffDataHeader" class="textLeft">LIFF Data</h2>
+        <table>
+          <tr>
+            <th>OS</th>
+            <td id="deviceOS" class="textLeft"></td>
+          </tr>
+          <tr>
+            <th>Language</th>
+            <td id="browserLanguage" class="textLeft"></td>
+          </tr>
+          <tr>
+            <th>LIFF SDK Version</th>
+            <td id="sdkVersion" class="textLeft"></td>
+          </tr>
+          <tr>
+            <th>isInClient</th>
+            <td id="isInClient" class="textLeft"></td>
+          </tr>
+          <tr>
+            <th>isLoggedIn</th>
+            <td id="isLoggedIn" class="textLeft"></td>
+          </tr>
+        </table>
+      </div>
       <!-- LOGIN LOGOUT BUTTONS -->
       <div class="buttonGroup">
         <button id="liffLoginButton">Log in</button>
@@ -238,22 +308,5 @@
       src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"
     ></script>
     <script src="liff-starter.js"></script>
-
-    <!-- Bootstrap honoka -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script src="honoka/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-      $('.bs-component [data-toggle="popover"]').popover();
-      $('.bs-component [data-toggle="tooltip"]').tooltip();
-    </script>
   </body>
 </html>
