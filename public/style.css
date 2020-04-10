@@ -62,10 +62,10 @@ td {
   text-align: left;
 }
 
-/* .buttonGroup {
+.buttonGroup {
   position: relative;
   top: 20px;
-} */
+}
 
 .hidden {
   display: none;
