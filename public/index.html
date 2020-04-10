@@ -40,19 +40,16 @@
                     <h3 class="card-title">
                       最初にすること
                     </h3>
-                  </div>
-                  <div class="embed-responsive">
-                    <img
-                      img
-                      src="imgs/image/_DSC2760-thumb_480.jpg"
-                      alt="step1写真"
-                    />
-                  </div>
-                  <div class="card-body">
                     <p class="card-text">
                       まず洗剤を探してください
                     </p>
                   </div>
+                  <img
+                    img
+                    src="imgs/image/_DSC2760-thumb_480.jpg"
+                    alt="step1写真"
+                    style="width: 100%; display: block;"
+                  />
                 </div>
               </div>
             </div>
@@ -67,13 +64,13 @@
                     <h3 class="card-title">
                       洗剤の場所
                     </h3>
-                    <h4 class="card-subtitle text-muted">
+                    <p class="card-text">
                       洗剤は引き出しや戸棚の中を探してください
-                    </h4>
+                    </p>
                   </div>
                   <img
                     img
-                    src="imgs/image/238_2.jpg"
+                    src="imgs/img0214.jpg"
                     alt="step2写真"
                     style="width: 100%; display: block;"
                   />
@@ -91,9 +88,9 @@
                     <h3 class="card-title">
                       洗剤の量
                     </h3>
-                    <h4 class="card-subtitle text-muted">
+                    <p class="card-text">
                       洗剤の使う量は背面か側面に載ってますので見てください
-                    </h4>
+                    </p>
                   </div>
                   <img
                     img
@@ -115,9 +112,9 @@
                     <h3 class="card-title">
                       洗う前の注意点
                     </h3>
-                    <h4 class="card-subtitle text-muted">
+                    <p class="card-text">
                       洗うものを洗濯機に入れてください。最初に３つの注意点をお伝えします。
-                    </h4>
+                    </p>
                   </div>
                   <img
                     img
@@ -139,9 +136,9 @@
                     <h3 class="card-title">
                       洗う前の注意点1
                     </h3>
-                    <h4 class="card-subtitle text-muted">
+                    <p class="card-text">
                       紙や異物が混じってないかポケット確認してください。
-                    </h4>
+                    </p>
                   </div>
                   <img
                     img
@@ -156,88 +153,6 @@
         </section>
       </div>
     </main>
-
-    <!-- 以下　SDKの一部のこし -->
-    <div id="liffAppContent">
-      <!-- ACTION BUTTONS -->
-      <div class="buttonGroup">
-        <div class="buttonRow">
-          <button id="sendMessageButton">Send Message</button>
-        </div>
-      </div>
-
-      <!-- LOGIN LOGOUT BUTTONS -->
-      <div class="buttonGroup">
-        <button id="liffLoginButton">Log in</button>
-        <button id="liffLogoutButton">Log out</button>
-      </div>
-      <div id="statusMessage">
-        <div id="isInClientMessage"></div>
-        <div id="apiReferenceMessage">
-          <p>
-            Available LIFF methods vary depending on the browser you use to open
-            the LIFF app.
-          </p>
-          <p>
-            Please refer to the
-            <a
-              href="https://developers.line.biz/en/reference/liff/#initialize-liff-app"
-              >API reference page</a
-            >
-            for more information.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- LIFF ID ERROR -->
-    <div id="liffIdErrorMessage" class="hidden">
-      <p>You have not assigned any value for LIFF ID.</p>
-      <p>
-        If you are running the app using Node.js, please set the LIFF ID as an
-        environment variable in your Heroku account follwing the below steps:
-      </p>
-      <code id="code-block">
-        <ol>
-          <li>Go to `Dashboard` in your Heroku account.</li>
-          <li>Click on the app you just created.</li>
-          <li>Click on `Settings` and toggle `Reveal Config Vars`.</li>
-          <li>Set `MY_LIFF_ID` as the key and the LIFF ID as the value.</li>
-          <li>
-            Your app should be up and running. Enter the URL of your app in a
-            web browser.
-          </li>
-        </ol>
-      </code>
-      <p>
-        If you are using any other platform, please add your LIFF ID in the
-        <code>index.html</code> file.
-      </p>
-      <p>
-        For more information about how to add your LIFF ID, see
-        <a
-          href="https://developers.line.biz/en/reference/liff/#initialize-liff-app"
-          >Initializing the LIFF app</a
-        >.
-      </p>
-    </div>
-    <!-- LIFF INIT ERROR -->
-    <div id="liffInitErrorMessage" class="hidden">
-      <p>Something went wrong with LIFF initialization.</p>
-      <p>
-        LIFF initialization can fail if a user clicks "Cancel" on the "Grant
-        permission" screen, or if an error occurs in the process of
-        <code>liff.init()</code>.
-      </p>
-    </div>
-    <!-- NODE.JS LIFF ID ERROR -->
-    <div id="nodeLiffIdErrorMessage" class="hidden">
-      <p>Unable to receive the LIFF ID as an environment variable.</p>
-    </div>
-    <script
-      charset="utf-8"
-      src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"
-    ></script>
-    <script src="liff-starter.js"></script>
 
     <!-- Bootstrap honoka -->
     <script
